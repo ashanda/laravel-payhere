@@ -1,0 +1,46 @@
+{
+    "name": "geekmac/laravel-payhere",
+    "description": "PayHere payment gateway integration for Laravel (Checkout API + notification verification).",
+    "keywords": ["laravel", "payhere", "payment", "gateway", "sri lanka"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Geekmac"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Geekmac\\PayHere\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Geekmac\\PayHere\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Geekmac\\PayHere\\PayHereServiceProvider"
+            ],
+            "aliases": {
+                "PayHere": "Geekmac\\PayHere\\Facades\\PayHere"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
